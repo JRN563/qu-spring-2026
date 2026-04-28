@@ -17,35 +17,30 @@
   Promise.all([parseCSV(url)])
     .then(results => {
       data = results[0].data;
-
-      config(); 
-
-      // window.addEventListener('load', resizeAllItems);
-      // window.addEventListener('resize', resizeAllItems);
+      authorPage();
     })
     .catch(error => {
       console.error('Error:', error)
     });
 
-  //make main page grid
-  function config(){
-    let grid = document.getElementById('mainGrid');
+  //populate authors page
+  function authorPage(){
+    let authorPage = document.querySelector('#authorPage')
 
-    let gridContent = '';
+    let authorContent = '';
 
     data.forEach((d, i) => {
-      gridContent += `
-        <a id="slat-${i}" class="slat" href="/articles/${d.link}">
-          <img class="thumbnailImg" src="/images/${d.heroImg}">
-          <div class="slatTitle">${d.headline}</div>
-          <div class="slatSubhed">${d.subhed}</div>
-          <div class="landingpage byline">${d.byline}</div>
-        </a>
+     authorContent += `
+      <div class="authorSection">
+        <a href="/articles/${d.link}">${d.headline}</a>
+        <br>
+        <div class="byline">${d.byline}</div>
+      </div>
+      
       `
+
     })
-    
-    grid.innerHTML = gridContent;
 
+    authorPage.innerHTML = authorContent;
   }
-
 })();

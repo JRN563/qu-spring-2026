@@ -34,6 +34,7 @@ a {
 
 .content {
   margin: 0 auto;
+  max-width: 728px;
 }
 
 #authorPage, #aboutPage {
@@ -42,6 +43,7 @@ a {
 
 #landingPage {
   max-width: 1008px;
+  margin: 0 auto;
 }
 
 .heroImg {

@@ -35,8 +35,8 @@
 
     data.forEach((d, i) => {
       gridContent += `
-        <a id="slat-${i}" class="slat" href="/articles/${d.link}">
-          <img class="thumbnailImg" src="/images/${d.heroImg}">
+        <a id="slat-${i}" class="slat" href="articles/${d.link}">
+          <img class="thumbnailImg" src="images/${d.heroImg}">
           <div class="slatTitle">${d.headline}</div>
           <div class="slatSubhed">${d.subhed}</div>
           <div class="landingpage byline">${d.byline}</div>

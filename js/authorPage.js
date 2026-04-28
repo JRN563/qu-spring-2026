@@ -32,7 +32,7 @@
     data.forEach((d, i) => {
      authorContent += `
       <div class="authorSection">
-        <a href="/articles/${d.link}">${d.headline}</a>
+        <a href="articles/${d.link}">${d.headline}</a>
         <br>
         <div class="byline">${d.byline}</div>
       </div>
